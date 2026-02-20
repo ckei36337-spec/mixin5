@@ -1,0 +1,31 @@
+
+@mixin heading($size: 2rem, $weight: 700, $color: #fff, $spacing: 0.5px) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  letter-spacing: $spacing;
+  line-height: 1.2;
+}
+
+
+@mixin body-text($size: 1rem, $weight: 400, $color: #e5e7eb, $spacing: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  letter-spacing: $spacing;
+  line-height: 1.5;
+}
+
+
+
+h1, h2 {
+  @include heading(2.5rem, 800, #3b82f6, 1px);
+}
+
+p {
+  @include body-text(1rem, 400, #f0f0f0, 0.2px);
+}
+
+span {
+  @include body-text(0.9rem, 400, #cbd5e1);
+}
