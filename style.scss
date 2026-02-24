@@ -1,31 +1,89 @@
 
-@mixin heading($size: 2rem, $weight: 700, $color: #fff, $spacing: 0.5px) {
+
+@mixin form-heading($size: 28px, $color: white) {
+  font-family: 'Segoe UI', sans-serif;
   font-size: $size;
-  font-weight: $weight;
+  font-weight: 700;
   color: $color;
-  letter-spacing: $spacing;
-  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-
-@mixin body-text($size: 1rem, $weight: 400, $color: #e5e7eb, $spacing: normal) {
+@mixin form-text($size: 14px, $color: #444) {
+  font-family: 'Segoe UI', sans-serif;
   font-size: $size;
-  font-weight: $weight;
   color: $color;
-  letter-spacing: $spacing;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 
-
-h1, h2 {
-  @include heading(2.5rem, 800, #3b82f6, 1px);
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-p {
-  @include body-text(1rem, 400, #f0f0f0, 0.2px);
+
+.form-container {
+  width: 380px;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.15);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-span {
-  @include body-text(0.9rem, 400, #cbd5e1);
+
+.form-title {
+  @include form-heading();
+  text-align: center;
+}
+
+.form-label {
+  @include form-text(14px, white);
+  display: block;
+  margin-top: 12px;
+}
+
+.form-input {
+  @include form-text(14px, #222);
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.4);
+}
+
+
+.form-help {
+  @include form-text(12px, #eee);
+  margin-top: 8px;
+}
+
+.form-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }

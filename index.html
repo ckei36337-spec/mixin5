@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chiko Manyeza - Styled Text</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Colorful Form Kit</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Main Heading Using Heading Mixin</h1>
-  <h2>Sub Heading Using Heading Mixin</h2>
+  <div class="form-container">
+    <h2 class="form-title">Get In Touch</h2>
 
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptate. <strong>body-text</strong> 
-  </p>
+    <label class="form-label">Full Name</label>
+    <input type="text" class="form-input" placeholder="Chiko Manyeza">
 
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa reiciendis corrupti iure aliquam explicabo tempore suscipit nulla molestiae ex?
-  </p>
+    <label class="form-label">Email</label>
+    <input type="email" class="form-input" placeholder="chiko@email.com">
 
-  <span>Span styled as body text using the mixin as well.</span>
+    <p class="form-help">We respect your privacy.</p>
+
+    <button class="form-btn">Send Message</button>
+  </div>
 
 </body>
 </html>
